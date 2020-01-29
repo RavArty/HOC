@@ -4,8 +4,8 @@ const Posts = ({ data }) => {
   return (
     <div className="block">
       <h1>Posts</h1>
-      {data.map(user => {
-        <h2>{user.name}</h2>;
+      {data.map(post => {
+        <h2>{post.title}</h2>;
       })}
     </div>
   );

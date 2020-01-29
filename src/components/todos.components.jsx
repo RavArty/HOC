@@ -4,8 +4,8 @@ const Todos = ({ data }) => {
   return (
     <div className="block">
       <h1>Todos</h1>
-      {data.map(user => {
-        <h2>{user.name}</h2>;
+      {data.map(todo => {
+        <h2>{todo.title}</h2>;
       })}
     </div>
   );
