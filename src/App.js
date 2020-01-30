@@ -1,25 +1,16 @@
 import React from 'react';
-
+import Users from './components/users.components';
+import Todos from './components/todos.components';
+import Posts from './components/posts.components';
 
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Users url="https://jsonplaceholder.typicode.com/users" />
+      <Todos url="https://jsonplaceholder.typicode.com/todos" />
+      <Posts url="https://jsonplaceholder.typicode.com/posts" />
     </div>
   );
-}
+};
 
 export default App;
