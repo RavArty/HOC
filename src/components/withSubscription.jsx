@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Spinner from './spinner.component';
 import axios from 'axios';
 
 const withSubscription = WrappedComponent => {
@@ -7,14 +8,16 @@ const withSubscription = WrappedComponent => {
     const [amount] = useState(5);
 
     useEffect(() => {
-      axios
-        .get(url)
-        .then(response => setData(response.data.slice(0, amount)))
-        .catch(error => console.log('Axios: ', error));
+      setTimeout(() => {
+        axios
+          .get(url)
+          .then(response => setData(response.data.slice(0, amount)))
+          .catch(error => console.log('Axios: ', error));
+      }, 2000);
     }, [url, amount]);
 
     return data.length < 1 ? (
-      <h1>loading</h1>
+      <Spinner />
     ) : (
       <WrappedComponent data={data} {...otherProps} />
     );

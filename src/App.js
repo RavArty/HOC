@@ -3,6 +3,8 @@ import Users from './components/users.components';
 import Todos from './components/todos.components';
 import Posts from './components/posts.components';
 
+import './App.scss';
+
 const App = () => {
   return (
     <div className="App">

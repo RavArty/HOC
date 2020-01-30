@@ -4,7 +4,7 @@ import withSubscription from './withSubscription';
 const Posts = ({ data }) => {
   return (
     <div className="block">
-      <h1>Posts</h1>
+      <h1 className="header">Posts</h1>
       {data.map(post => (
         <h2 key={post.id}>{post.title}</h2>
       ))}
